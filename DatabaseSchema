@@ -82,11 +82,4 @@ CREATE TABLE `user` (
 ) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
 
 
-CREATE TABLE `user_accountno` (
-  `user_userid` int NOT NULL,
-  `accountno_accountno` bigint NOT NULL,
-  UNIQUE KEY `UK_1ij2q5wy8qqaelt2r1okxgsx0` (`accountno_accountno`),
-  KEY `FKd3qixcrc582sf15v4iee8nwsa` (`user_userid`),
-  CONSTRAINT `FK51h9odxe1p3y3f2anv25ekjmv` FOREIGN KEY (`accountno_accountno`) REFERENCES `account` (`accountno`),
-  CONSTRAINT `FKd3qixcrc582sf15v4iee8nwsa` FOREIGN KEY (`user_userid`) REFERENCES `user` (`userid`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
+
